@@ -56,7 +56,7 @@ private[ainterface] object ErlTermCodec {
         // A BigInt has one sign bit, but the external format does not requires it.
         if (bytes.last == 0) bytes.init else bytes
       }
-      val n = d.length
+      val n = d.length.toInt
       n :: (int >= 0) :: d :: HNil
     }
     val smallBigCodec: Codec[ErlInteger] = {

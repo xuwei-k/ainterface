@@ -5,6 +5,7 @@ object Build extends Build {
   lazy val buildSettings = Seq(
     organization := "com.okumin",
     version      := "0.2",
+    crossScalaVersions := Seq("2.12.0", "2.11.8"),
     scalaVersion := "2.11.8"
   )
 
